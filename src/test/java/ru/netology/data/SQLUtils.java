@@ -41,7 +41,7 @@ public class SQLUtils {
         return code;
     }
 
-    public String getStatusFromDb(String login) throws SQLException {
+    public static String getStatusFromDb(String login) throws SQLException {
         String statusSQL = "SELECT status FROM users WHERE login = ?;";
         String status = null;
         try (val conn = getConnection();
